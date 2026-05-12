@@ -534,6 +534,7 @@ printHeading "Install Google Cloud SDK and Components"
     printStep "App Engine - Python"         "gcloud components install app-engine-python --quiet"
     printStep "App Engine - Python Extras"  "gcloud components install app-engine-python-extras --quiet"
     printStep "Kubectl"                     "gcloud components install kubectl --quiet"
+    printStep "GKE Auth Plugin"             "gcloud components install gke-gcloud-auth-plugin --quiet"
     printStep "Docker Credentials"          "gcloud components install docker-credential-gcr --quiet"
 printDivider
 
@@ -655,9 +656,7 @@ printHeading "Authenticate Services"
     printDivider
     printStep "Google Cloud Docker Auth"    "gcloud auth configure-docker"
     printDivider
-    printStep "Set Kubernetes Context"      "kubectl config set-context gke_repcore-prod_us-central1_vendasta-central"
-    printDivider
-    printStep "Get GKE Credentials"         "gcloud beta container clusters get-credentials vendasta-central --region us-central1 --project repcore-prod"
+    printStep "Get Connect Gateway Credentials" "gcloud container fleet memberships get-credentials vendasta-central --project=repcore-prod"
     printDivider
     printStep "Verify Google Cloud Auth"    "gcloud auth print-identity-token"
     printDivider

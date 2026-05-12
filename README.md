@@ -64,8 +64,7 @@ After you have run the script, please complete the following steps to finish set
    gcloud auth login
    gcloud auth application-default login
    gcloud auth configure-docker
-   kubectl config set-context gke_repcore-prod_us-central1_vendasta-central
-   gcloud beta container clusters get-credentials vendasta-central --region us-central1 --project repcore-prod
+   gcloud container fleet memberships get-credentials vendasta-central --project=repcore-prod
    gcloud auth print-identity-token
    ```
 
@@ -445,6 +444,7 @@ gcloud components install app-engine-go --quiet
 gcloud components install app-engine-python --quiet
 gcloud components install app-engine-python-extras --quiet
 gcloud components install kubectl --quiet
+gcloud components install gke-gcloud-auth-plugin --quiet
 gcloud components install docker-credential-gcr --quiet
 ```
 </details>
@@ -456,8 +456,7 @@ gcloud components install docker-credential-gcr --quiet
 gcloud auth login
 gcloud auth application-default login
 gcloud auth configure-docker
-kubectl config set-context gke_repcore-prod_us-central1_vendasta-central
-gcloud beta container clusters get-credentials vendasta-central --region us-central1 --project repcore-prod
+gcloud container fleet memberships get-credentials vendasta-central --project=repcore-prod
 gcloud auth print-identity-token
 ```
 </details>
